@@ -7,12 +7,15 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-    
-    <bean class="com.springcore.Student" name="student1">
-    	<property name="studentId">
-    		<value>101</value>
-    	</property>
-    	
+
+    <!-- This is the short method to define all properties in a single line -->
+    <bean class="com.springcore.Student" name="student1" p:studentId="101" p:studentName="Keshav" p:studentAddress="Ghaziabad"/> 
+
+	<bean class="com.springcore.Student" name="student2" p:studentId="102" p:studentName="Rahul" p:studentAddress="Noida"/> 
+
+	<bean class="com.springcore.Student" name="student3" p:studentId="103" p:studentName="Akshay" p:studentAddress="Delhi"/> 
+<!--Here we are defining each property in different attribute in seperate line
+
     	<property name="studentName">
     		<value>Keshav</value>
     	</property>
@@ -20,7 +23,7 @@
     	<property name="studentAddress">
     		<value>Ghaziabad</value>
     	</property>
-    </bean>
+    </bean> -->
     
     
 </beans>
