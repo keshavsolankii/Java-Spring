@@ -8,9 +8,19 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean class="com.springcore.constructor_injection.Certificate" name="certi">
+		<constructor-arg value="101" type="int"/>
+		<constructor-arg value="Keshav"/>
+	</bean>
     <bean class="com.springcore.constructor_injection.Person" name="person1">
-		
-		
+		<constructor-arg value="Keshav" type="String"/>
+		<constructor-arg value="21" type="String"/>
+		<constructor-arg ref="certi"/>
+	</bean>
+    <bean class="com.springcore.constructor_injection.Person" name="person2">
+		<constructor-arg value="Rohan" type="String"/>
+		<constructor-arg value="20" type="String"/>
+		<constructor-arg ref="certi"/>
 	</bean>
     
     
